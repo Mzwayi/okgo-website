@@ -139,10 +139,15 @@ export default function HomePage() {
       <Head>
         <title>OKgo - AI-Powered Supply Chain Visibility Across Africa</title>
         <meta name="description" content="Track, predict, and protect your shipments and assets in real time with OKgo's AI-powered supply chain visibility solutions across Africa." />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes" />
+        <meta name="format-detection" content="telephone=yes" />
+        <meta name="theme-color" content="#eab308" />
         <meta property="og:title" content="OKgo - AI-Powered Supply Chain Visibility Across Africa" />
         <meta property="og:description" content="Track, predict, and protect your shipments and assets in real time with OKgo's AI-powered supply chain visibility solutions across Africa." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ok-go.co.za" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </Head>
 
       <Navbar />
@@ -150,12 +155,12 @@ export default function HomePage() {
 
       <main>
         {/* Hero Section with Industry Selection */}
-        <section className="min-h-screen overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-          <div className="h-screen grid grid-cols-1 lg:grid-cols-12">
+        <section className="hero-section min-h-screen-safe bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+          <div className="min-h-screen-safe flex flex-col lg:flex-row">
             {/* Left Column - Video Section (65%) */}
-            <div className="lg:col-span-8 relative">
+            <div className="lg:flex-[2] relative hero-video-container">
               {/* Video Container */}
-              <div className="absolute inset-0">
+              <div className="absolute inset-0 overflow-hidden">
                 <video 
                   className="w-full h-full object-cover"
                   autoPlay
@@ -163,6 +168,12 @@ export default function HomePage() {
                   loop
                   playsInline
                   poster="/videos/asset-tracking-poster.jpg"
+                  style={{
+                    objectFit: 'cover',
+                    objectPosition: 'center center',
+                    width: '100%',
+                    height: '100%'
+                  }}
                 >
                   <source src="/videos/hero-banner-video.mp4" type="video/mp4" />
                   <div 
@@ -177,54 +188,54 @@ export default function HomePage() {
               </div>
 
               {/* Text Content Overlay */}
-              <div className="relative z-10 h-full flex items-center justify-start p-8 lg:p-16">
-                <div className="text-white max-w-4xl">
+              <div className="relative z-10 h-full flex items-center justify-start p-4 sm:p-6 md:p-8 lg:p-16">
+                <div className="text-white max-w-4xl w-full">
                   {/* Trust Badge */}
-                  <div className="inline-flex items-center bg-white/10 backdrop-blur-md rounded-full px-6 py-3 mb-8 border border-white/20">
-                    <Award className="w-5 h-5 text-okgo-yellow mr-3" />
-                    <span className="text-sm font-semibold tracking-wide">TRUSTED BY 500+ ENTERPRISES</span>
+                  <div className="inline-flex items-center bg-white/10 backdrop-blur-md rounded-full px-4 sm:px-6 py-2 sm:py-3 mb-6 sm:mb-8 border border-white/20">
+                    <Award className="w-4 h-4 sm:w-5 sm:h-5 text-okgo-yellow mr-2 sm:mr-3" />
+                    <span className="text-xs sm:text-sm font-semibold tracking-wide">TRUSTED BY 500+ ENTERPRISES</span>
                   </div>
 
-                  <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-8 animate-fade-in-up">
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 sm:mb-8 animate-fade-in-up">
                     <span className="block text-white">Stop Losing Control</span>
                     <span className="block bg-gradient-to-r from-okgo-yellow to-yellow-300 bg-clip-text text-transparent">
                       of Your Supply Chain
                     </span>
                   </h1>
                   
-                  <p className="text-xl md:text-2xl lg:text-3xl text-slate-200 mb-10 leading-relaxed animate-fade-in-up font-light max-w-3xl">
+                  <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-slate-200 mb-8 sm:mb-10 leading-relaxed animate-fade-in-up font-light max-w-3xl">
                   Reduce risk and improve control with 360° asset visibility that gives you real-time insight into your supply chain, enabling proactive response to potential disruptions.
                   </p>
 
                   {/* Enhanced Stats Badge */}
-                  <div className="bg-gradient-to-r from-white/15 to-white/5 backdrop-blur-xl rounded-2xl p-6 mb-10 border border-white/20 shadow-2xl animate-fade-in-up max-w-2xl">
-                    <div className="grid grid-cols-2 gap-6">
+                  <div className="bg-gradient-to-r from-white/15 to-white/5 backdrop-blur-xl rounded-2xl p-4 sm:p-6 mb-8 sm:mb-10 border border-white/20 shadow-2xl animate-fade-in-up max-w-2xl">
+                    <div className="grid grid-cols-2 gap-4 sm:gap-6">
                       <div className="text-center">
-                        <div className="text-3xl font-bold text-okgo-yellow mb-1">35%</div>
-                        <div className="text-sm text-slate-300 font-medium">Loss Reduction</div>
+                        <div className="text-2xl sm:text-3xl font-bold text-okgo-yellow mb-1">35%</div>
+                        <div className="text-xs sm:text-sm text-slate-300 font-medium">Loss Reduction</div>
                       </div>
                       <div className="text-center">
-                        <div className="text-3xl font-bold text-okgo-yellow mb-1">90%</div>
-                        <div className="text-sm text-slate-300 font-medium">Delivery Reliability</div>
+                        <div className="text-2xl sm:text-3xl font-bold text-okgo-yellow mb-1">90%</div>
+                        <div className="text-xs sm:text-sm text-slate-300 font-medium">Delivery Reliability</div>
                       </div>
                     </div>
                   </div>
                   
                   {/* CTA Buttons - Show on mobile/tablet, hide on large screens */}
-                  <div className="flex flex-col sm:flex-row gap-4 lg:hidden">
+                  <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 lg:hidden">
                     <CTAButton 
                       href="/contact-us" 
                       size="lg"
-                      className="bg-gradient-to-r from-okgo-yellow to-yellow-400 text-slate-900 hover:from-yellow-400 hover:to-okgo-yellow font-bold shadow-2xl hover:shadow-yellow-500/25 transition-all duration-300"
+                      className="bg-gradient-to-r from-okgo-yellow to-yellow-400 text-slate-900 hover:from-yellow-400 hover:to-okgo-yellow font-bold shadow-2xl hover:shadow-yellow-500/25 transition-all duration-300 min-h-[48px] text-base sm:text-lg"
                     >
                       Book Enterprise Demo
                     </CTAButton>
                     <CTAButton 
                       href="#how-it-works"
                       size="lg"
-                      className="bg-white/10 backdrop-blur-md border-2 border-white/30 text-white hover:bg-white hover:text-slate-900 transition-all duration-300"
+                      className="bg-white/10 backdrop-blur-md border-2 border-white/30 text-white hover:bg-white hover:text-slate-900 transition-all duration-300 min-h-[48px] text-base sm:text-lg"
                     >
-                      <Play className="w-5 h-5 mr-2" />
+                      <Play className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                       See How It Works
                     </CTAButton>
                   </div>
@@ -233,48 +244,48 @@ export default function HomePage() {
             </div>
 
             {/* Right Column - Industry Selection (35%) - Fixed Layout */}
-            <div className="lg:col-span-4 bg-white shadow-2xl border-l border-slate-200 flex flex-col h-screen">
+            <div className="lg:flex-1 bg-white shadow-2xl border-l border-slate-200 flex flex-col min-h-[40vh] lg:h-screen-safe">
               {/* Enhanced Header - Fixed with better spacing */}
-              <div className="px-6 lg:px-8 pt-8 lg:pt-12 pb-6 lg:pb-8 border-b border-slate-100 bg-gradient-to-br from-slate-50 to-white flex-shrink-0">
-                <div className="flex items-center mb-6">
-                  <div className="w-3 h-3 bg-okgo-yellow rounded-full mr-3"></div>
-                  <span className="text-xs lg:text-sm font-semibold text-slate-600 uppercase tracking-wide">Industry Solutions</span>
+              <div className="px-4 sm:px-6 lg:px-8 pt-6 sm:pt-8 lg:pt-12 pb-4 sm:pb-6 lg:pb-8 border-b border-slate-100 bg-gradient-to-br from-slate-50 to-white flex-shrink-0">
+                <div className="flex items-center mb-4 sm:mb-6">
+                  <div className="w-2 h-2 sm:w-3 sm:h-3 bg-okgo-yellow rounded-full mr-2 sm:mr-3"></div>
+                  <span className="text-xs sm:text-xs lg:text-sm font-semibold text-slate-600 uppercase tracking-wide">Industry Solutions</span>
                 </div>
-                <h2 className="text-xl lg:text-2xl xl:text-3xl font-bold mb-4 text-slate-900 leading-tight">
+                <h2 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold mb-3 sm:mb-4 text-slate-900 leading-tight">
                   What's Your Industry?
                 </h2>
-                <p className="text-slate-600 leading-relaxed text-sm lg:text-base">
+                <p className="text-slate-600 leading-relaxed text-sm sm:text-sm lg:text-base">
                   Discover tailored solutions and proven results for your specific industry challenges
                 </p>
               </div>
 
               {/* Industry Selection - Improved scrolling */}
               <div className="flex-1 overflow-hidden flex flex-col bg-gradient-to-b from-white to-slate-50">
-                <div className="flex-1 overflow-y-auto px-6 lg:px-8 py-6">
-                  <div className="space-y-3">
+                <div className="flex-1 overflow-y-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
+                  <div className="space-y-2 sm:space-y-3">
                     {industries.map((industry) => (
                       <button
                         key={industry.id}
                         onClick={() => setSelectedIndustry(industry.id)}
-                        className={`w-full p-4 lg:p-5 rounded-2xl border transition-all duration-300 text-left hover:scale-[1.02] group shadow-sm hover:shadow-lg ${
+                        className={`w-full p-3 sm:p-4 lg:p-5 rounded-2xl border transition-all duration-300 text-left hover:scale-[1.02] group shadow-sm hover:shadow-lg min-h-[72px] sm:min-h-[80px] ${
                           selectedIndustry === industry.id
                             ? 'bg-gradient-to-r from-okgo-yellow to-yellow-400 border-transparent text-slate-900 shadow-xl shadow-yellow-500/20'
                             : 'bg-white border-slate-200 text-slate-900 hover:bg-slate-50 hover:border-okgo-yellow/30'
                         }`}
                       >
                         <div className="flex items-start">
-                          <div className={`w-10 h-10 lg:w-12 lg:h-12 rounded-xl flex items-center justify-center mr-3 lg:mr-4 flex-shrink-0 transition-colors ${
+                          <div className={`w-10 h-10 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-xl flex items-center justify-center mr-3 sm:mr-3 lg:mr-4 flex-shrink-0 transition-colors ${
                             selectedIndustry === industry.id 
                               ? 'bg-white/20 text-slate-900' 
                               : 'bg-gradient-to-br from-okgo-yellow/10 to-yellow-100 text-okgo-yellow group-hover:from-okgo-yellow/20 group-hover:to-yellow-200'
                           }`}>
-                            <industry.icon className="w-5 h-5 lg:w-6 lg:h-6" />
+                            <industry.icon className="w-5 h-5 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />
                           </div>
                           <div className="min-w-0 flex-1">
-                            <h3 className="font-bold text-sm lg:text-base mb-2 leading-tight">
+                            <h3 className="font-bold text-sm sm:text-sm lg:text-base mb-1 sm:mb-2 leading-tight">
                               {industry.name}
                             </h3>
-                            <p className={`text-xs lg:text-sm leading-relaxed ${
+                            <p className={`text-xs sm:text-xs lg:text-sm leading-relaxed ${
                               selectedIndustry === industry.id ? 'text-slate-800' : 'text-slate-600'
                             }`}>
                               {industry.description}
@@ -288,21 +299,21 @@ export default function HomePage() {
               </div>
 
               {/* Enhanced CTA Section - Desktop Only */}
-              <div className="hidden lg:block px-6 lg:px-8 py-6 lg:py-8 border-t border-slate-100 bg-gradient-to-br from-slate-900 to-slate-800 flex-shrink-0">
-                <div className="space-y-4">
+              <div className="hidden lg:block px-4 sm:px-6 lg:px-8 py-4 sm:py-6 lg:py-8 border-t border-slate-100 bg-gradient-to-br from-slate-900 to-slate-800 flex-shrink-0">
+                <div className="space-y-3 sm:space-y-4">
                   <CTAButton 
                     href="/contact-us" 
                     size="lg"
-                    className="w-full bg-gradient-to-r from-okgo-yellow to-yellow-400 text-slate-900 hover:from-yellow-400 hover:to-okgo-yellow font-bold shadow-xl hover:shadow-yellow-500/25"
+                    className="w-full bg-gradient-to-r from-okgo-yellow to-yellow-400 text-slate-900 hover:from-yellow-400 hover:to-okgo-yellow font-bold shadow-xl hover:shadow-yellow-500/25 min-h-[48px]"
                   >
                     Book Enterprise Demo
                   </CTAButton>
                   <CTAButton 
                     href="#how-it-works"
                     size="lg"
-                    className="w-full bg-white/10 backdrop-blur-md border-2 border-white/20 text-white hover:bg-white hover:text-slate-900"
+                    className="w-full bg-white/10 backdrop-blur-md border-2 border-white/20 text-white hover:bg-white hover:text-slate-900 min-h-[48px]"
                   >
-                    <Play className="w-5 h-5 mr-2" />
+                    <Play className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                     See How It Works
                   </CTAButton>
                 </div>
@@ -313,55 +324,55 @@ export default function HomePage() {
           {/* Selected Industry Details - Enhanced with ID for scrolling */}
           {selectedIndustry && (
             <div id="industry-details" className="bg-white border-t-4 border-okgo-yellow shadow-2xl animate-fade-in-up">
-              <div className="container-custom py-12">
-                <div className="bg-gradient-to-br from-slate-50 via-white to-slate-50 rounded-3xl p-8 md:p-12 text-slate-900 border border-slate-200 shadow-xl">
-                  <div className="text-center mb-8">
-                    <div className="inline-flex items-center bg-okgo-yellow/10 rounded-full px-6 py-2 mb-4">
-                      <span className="text-sm font-bold text-okgo-yellow uppercase tracking-wide">Industry Solution</span>
+              <div className="container-custom py-8 sm:py-12">
+                <div className="bg-gradient-to-br from-slate-50 via-white to-slate-50 rounded-3xl p-6 sm:p-8 md:p-12 text-slate-900 border border-slate-200 shadow-xl">
+                  <div className="text-center mb-6 sm:mb-8">
+                    <div className="inline-flex items-center bg-okgo-yellow/10 rounded-full px-4 sm:px-6 py-2 mb-3 sm:mb-4">
+                      <span className="text-xs sm:text-sm font-bold text-okgo-yellow uppercase tracking-wide">Industry Solution</span>
                     </div>
-                    <h3 className="text-3xl font-bold text-slate-900 mb-4">{getSelectedIndustryData()?.name}</h3>
+                    <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-3 sm:mb-4">{getSelectedIndustryData()?.name}</h3>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-10">
                     <div className="text-center group">
-                      <div className="w-20 h-20 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:shadow-xl transition-shadow">
-                        <Target className="w-10 h-10 text-white" />
+                      <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg group-hover:shadow-xl transition-shadow">
+                        <Target className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
                       </div>
-                      <h4 className="font-bold text-lg mb-3 text-red-600">Your Challenge</h4>
-                      <p className="text-slate-600 leading-relaxed">{getSelectedIndustryData()?.pain}</p>
+                      <h4 className="font-bold text-base sm:text-lg mb-2 sm:mb-3 text-red-600">Your Challenge</h4>
+                      <p className="text-slate-600 leading-relaxed text-sm sm:text-base">{getSelectedIndustryData()?.pain}</p>
                     </div>
                     
                     <div className="text-center group">
-                      <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:shadow-xl transition-shadow">
-                        <Zap className="w-10 h-10 text-white" />
+                      <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg group-hover:shadow-xl transition-shadow">
+                        <Zap className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
                       </div>
-                      <h4 className="font-bold text-lg mb-3 text-blue-600">OKgo Solution</h4>
-                      <p className="text-slate-600 leading-relaxed">{getSelectedIndustryData()?.solution}</p>
+                      <h4 className="font-bold text-base sm:text-lg mb-2 sm:mb-3 text-blue-600">OKgo Solution</h4>
+                      <p className="text-slate-600 leading-relaxed text-sm sm:text-base">{getSelectedIndustryData()?.solution}</p>
                     </div>
                     
                     <div className="text-center group">
-                      <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:shadow-xl transition-shadow">
-                        <TrendingUp className="w-10 h-10 text-white" />
+                      <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg group-hover:shadow-xl transition-shadow">
+                        <TrendingUp className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
                       </div>
-                      <h4 className="font-bold text-lg mb-3 text-green-600">Your Results</h4>
-                      <p className="text-slate-600 leading-relaxed">{getSelectedIndustryData()?.benefit}</p>
+                      <h4 className="font-bold text-base sm:text-lg mb-2 sm:mb-3 text-green-600">Your Results</h4>
+                      <p className="text-slate-600 leading-relaxed text-sm sm:text-base">{getSelectedIndustryData()?.benefit}</p>
                     </div>
                   </div>
                   
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
                     <CTAButton 
                       href="/contact-us" 
                       size="lg"
-                      className="bg-gradient-to-r from-okgo-yellow to-yellow-400 text-slate-900 hover:from-yellow-400 hover:to-okgo-yellow font-bold shadow-xl"
+                      className="bg-gradient-to-r from-okgo-yellow to-yellow-400 text-slate-900 hover:from-yellow-400 hover:to-okgo-yellow font-bold shadow-xl min-h-[48px]"
                     >
                       Book Enterprise Demo
                     </CTAButton>
                     <CTAButton 
                       href="#how-it-works"
                       size="lg"
-                      className="bg-transparent border-2 border-okgo-yellow text-okgo-yellow hover:bg-okgo-yellow hover:text-slate-900"
+                      className="bg-transparent border-2 border-okgo-yellow text-okgo-yellow hover:bg-okgo-yellow hover:text-slate-900 min-h-[48px]"
                     >
-                      <Play className="w-5 h-5 mr-2" />
+                      <Play className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                       See How It Works
                     </CTAButton>
                   </div>
@@ -374,16 +385,16 @@ export default function HomePage() {
         {/* Enhanced by Roambee Section */}
         <section className="section-padding bg-gradient-to-br from-slate-50 to-white">
           <div className="container-custom text-center">
-            <div className="bg-white rounded-3xl p-12 shadow-2xl border border-slate-100 max-w-5xl mx-auto">
-              <div className="mb-8">
-                <div className="inline-flex items-center bg-okgo-yellow/10 rounded-full px-6 py-2 mb-6">
-                  <Award className="w-5 h-5 text-okgo-yellow mr-2" />
-                  <span className="text-sm font-bold text-okgo-yellow uppercase tracking-wide">Enterprise Partnership</span>
+            <div className="bg-white rounded-3xl p-6 sm:p-8 md:p-12 shadow-2xl border border-slate-100 max-w-5xl mx-auto">
+              <div className="mb-6 sm:mb-8">
+                <div className="inline-flex items-center bg-okgo-yellow/10 rounded-full px-4 sm:px-6 py-2 mb-4 sm:mb-6">
+                  <Award className="w-4 h-4 sm:w-5 sm:h-5 text-okgo-yellow mr-2" />
+                  <span className="text-xs sm:text-sm font-bold text-okgo-yellow uppercase tracking-wide">Enterprise Partnership</span>
                 </div>
-                <h2 className="text-2xl font-semibold text-slate-600 mb-3">A Tracker Company</h2>
-                <h3 className="text-4xl md:text-5xl font-bold text-slate-900 mb-8">Enhanced by Roambee</h3>
+                <h2 className="text-xl sm:text-2xl font-semibold text-slate-600 mb-2 sm:mb-3">A Tracker Company</h2>
+                <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mb-6 sm:mb-8">Enhanced by Roambee</h3>
               </div>
-              <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
+              <p className="text-lg sm:text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
                 OKgo delivers enterprise-grade visibility and actionable intelligence across your entire value chain. 
                 From manufacturers and suppliers to last-mile delivery, our platform provides comprehensive oversight 
                 of assets and shipments across business partners, intermediaries, and international borders.
@@ -393,33 +404,33 @@ export default function HomePage() {
         </section>
 
         {/* Enhanced Impact Metrics Strip */}
-        <section className="py-20 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+        <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
           {/* Background Pattern */}
           <div className="absolute inset-0 opacity-10">
             <div className="absolute inset-0 bg-gradient-to-r from-okgo-yellow/20 to-transparent"></div>
           </div>
           
           <div className="container-custom relative">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <div className="text-center mb-8 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 sm:mb-4">
                 Proven Enterprise Results
               </h2>
-              <p className="text-xl text-slate-300">
+              <p className="text-lg sm:text-xl text-slate-300">
                 Measurable impact across African supply chains
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center text-white">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 text-center text-white">
               {impactMetrics.map((metric, index) => (
                 <div key={index} className="group animate-fade-in-up">
-                  <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105">
-                    <div className="text-5xl md:text-6xl font-bold mb-3 bg-gradient-to-r from-okgo-yellow to-yellow-300 bg-clip-text text-transparent">
+                  <div className="bg-white/5 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105">
+                    <div className="text-4xl sm:text-5xl md:text-6xl font-bold mb-2 sm:mb-3 bg-gradient-to-r from-okgo-yellow to-yellow-300 bg-clip-text text-transparent">
                       {metric.value}
                     </div>
-                    <div className="text-xl font-semibold text-white mb-2">
+                    <div className="text-lg sm:text-xl font-semibold text-white mb-1 sm:mb-2">
                       {metric.label}
                     </div>
-                    <div className="text-sm text-slate-400">
+                    <div className="text-sm sm:text-sm text-slate-400">
                       {metric.subtext}
                     </div>
                   </div>
@@ -432,21 +443,21 @@ export default function HomePage() {
         {/* How It Works Video Section */}
         <section id="how-it-works" className="section-padding bg-white">
           <div className="container-custom">
-            <div className="text-center mb-20">
-              <div className="inline-flex items-center bg-okgo-yellow/10 rounded-full px-6 py-2 mb-6">
-                <Play className="w-5 h-5 text-okgo-yellow mr-2" />
-                <span className="text-sm font-bold text-okgo-yellow uppercase tracking-wide">Platform Demo</span>
+            <div className="text-center mb-12 sm:mb-16 md:mb-20">
+              <div className="inline-flex items-center bg-okgo-yellow/10 rounded-full px-4 sm:px-6 py-2 mb-4 sm:mb-6">
+                <Play className="w-4 h-4 sm:w-5 sm:h-5 text-okgo-yellow mr-2" />
+                <span className="text-xs sm:text-sm font-bold text-okgo-yellow uppercase tracking-wide">Platform Demo</span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-8">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mb-6 sm:mb-8">
                 See How OKgo Works
               </h2>
-              <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
+              <p className="text-lg sm:text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
                 Watch how OKgo transforms supply chain visibility across Africa's complex logistics landscape with enterprise-grade solutions
               </p>
             </div>
             
             <div className="max-w-6xl mx-auto">
-              <div className="relative aspect-video bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl overflow-hidden shadow-2xl border border-slate-200">
+              <div className="relative aspect-video bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-slate-200">
                 <video 
                   className="w-full h-full object-cover"
                   controls
@@ -467,22 +478,22 @@ export default function HomePage() {
                 </video>
               </div>
               
-              <div className="text-center mt-12">
-                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <div className="text-center mt-8 sm:mt-12">
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
                   <CTAButton 
                     href="/contact-us" 
                     size="lg"
-                    className="bg-gradient-to-r from-okgo-yellow to-yellow-400 text-slate-900 hover:from-yellow-400 hover:to-okgo-yellow font-bold shadow-xl"
+                    className="bg-gradient-to-r from-okgo-yellow to-yellow-400 text-slate-900 hover:from-yellow-400 hover:to-okgo-yellow font-bold shadow-xl min-h-[48px]"
                   >
                     Schedule Enterprise Demo
                   </CTAButton>
                   <CTAButton 
                     href="/solutions" 
                     size="lg"
-                    className="bg-gradient-to-r from-slate-900 to-slate-800 text-white hover:from-slate-800 hover:to-slate-700 font-semibold border border-slate-600"
+                    className="bg-gradient-to-r from-slate-900 to-slate-800 text-white hover:from-slate-800 hover:to-slate-700 font-semibold border border-slate-600 min-h-[48px]"
                   >
                     Explore Solutions
-                    <ArrowRight className="w-5 h-5 ml-2" />
+                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
                   </CTAButton>
                 </div>
               </div>

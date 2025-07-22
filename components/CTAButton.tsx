@@ -26,10 +26,10 @@ export default function CTAButton({
   disabled = false,
 }: CTAButtonProps) {
   const baseClasses = cn(
-    'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5',
+    'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 touch-manipulation',
     {
-      'py-3 px-6 text-base': size === 'default',
-      'py-4 px-8 text-lg': size === 'lg',
+      'py-3 px-4 sm:px-6 text-sm sm:text-base min-h-[44px]': size === 'default',
+      'py-3 sm:py-4 px-6 sm:px-8 text-base sm:text-lg min-h-[48px]': size === 'lg',
       'bg-okgo-yellow hover:bg-okgo-yellow-dark text-white': variant === 'primary' && !disabled,
       'bg-white hover:bg-gray-50 text-okgo-yellow border-2 border-okgo-yellow': variant === 'secondary' && !disabled,
       'bg-gray-400 text-gray-600 cursor-not-allowed': disabled,
